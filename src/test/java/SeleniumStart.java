@@ -17,7 +17,8 @@ public class SeleniumStart {
         System.out.println("Opening web-site");
         wd = new ChromeDriver();
         //    wd.get("https://telranedu.web.app/home");
-        wd.navigate().to("https://telranedu.web.app/home");
+       // wd.navigate().to("https://telranedu.web.app/home");
+        wd.navigate().to("https://telranedu.web.app/login");
         //wd.navigate().forward();
         //  wd.navigate().back();
 
@@ -30,6 +31,64 @@ public class SeleniumStart {
         WebElement element = wd.findElement(By.tagName("a"));
         List<WebElement> elements = wd.findElements(By.tagName("a"));
         System.out.println(elements.size());
+//HOME WORK 6
+        //HOME WORK 7 Locator By.cssSelector
+
+        //Locator By.tagName
+
+       wd.findElement(By.tagName("form"));
+
+       //Locator By.cssSelector
+       wd.findElement(By.cssSelector("form"));
+
+
+
+        //Locator By.className
+         wd.findElement(By.className("active"));
+         wd.findElement(By.className("navbar-component_nav__1X_4m"));
+         wd.findElement(By.className("container"));
+
+         //Locator By.cssSelector
+        wd.findElement(By.cssSelector(".active"));
+        wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
+        wd.findElement(By.cssSelector(".container"));
+
+
+
+       //Locator By.id
+         wd.findElement(By.id("root"));
+
+         //Locator By.cssSelector
+        wd.findElement(By.cssSelector("#root"));
+
+
+         //Locator By.linkText
+        wd.findElement(By.linkText("HOME"));
+        wd.findElement(By.linkText("ABOUT"));
+        wd.findElement(By.linkText("LOGIN"));
+
+        //Locator By.cssSelector
+        wd.findElement(By.cssSelector("[href='/home']"));
+        wd.findElement(By.cssSelector("[href='/about']"));
+        wd.findElement(By.cssSelector("[href='/login']"));
+
+        //Locator By.partialLinkText
+        wd.findElement(By.partialLinkText("H"));
+        wd.findElement(By.partialLinkText("AB"));
+        wd.findElement(By.partialLinkText("IN"));
+
+        //Locator By.cssSelector
+        wd.findElement(By.cssSelector("[href*='home']"));
+        wd.findElement(By.cssSelector("[href^='/a']"));
+        wd.findElement(By.cssSelector("[href$='in']"));
+
+       //Locator By.name
+
+        wd.findElement(By.name("password"));
+        wd.findElement(By.name("email"));
+        wd.findElement(By.name("login"));
+
+
     }
 
     @AfterMethod
