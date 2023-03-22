@@ -38,8 +38,13 @@ public class SeleniumStart {
 
        wd.findElement(By.tagName("form"));
 
+
        //Locator By.cssSelector
        wd.findElement(By.cssSelector("form"));
+        //Locator By.xPath
+        wd.findElement(By.xpath("//form"));
+
+
 
 
 
@@ -52,6 +57,10 @@ public class SeleniumStart {
         wd.findElement(By.cssSelector(".active"));
         wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
         wd.findElement(By.cssSelector(".container"));
+
+        //Locator By.xPath
+        wd.findElement(By.xpath("//*[@class = 'navbar-component_nav__1X_4m']"));
+
 
 
 
