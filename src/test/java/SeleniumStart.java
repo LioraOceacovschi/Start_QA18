@@ -17,7 +17,7 @@ public class SeleniumStart {
         System.out.println("Opening web-site");
         wd = new ChromeDriver();
         //    wd.get("https://telranedu.web.app/home");
-       // wd.navigate().to("https://telranedu.web.app/home");
+        // wd.navigate().to("https://telranedu.web.app/home");
         wd.navigate().to("https://telranedu.web.app/login");
         //wd.navigate().forward();
         //  wd.navigate().back();
@@ -31,47 +31,49 @@ public class SeleniumStart {
         WebElement element = wd.findElement(By.tagName("a"));
         List<WebElement> elements = wd.findElements(By.tagName("a"));
         System.out.println(elements.size());
-//HOME WORK 6
-        //HOME WORK 7 Locator By.cssSelector
+//HOME WORK 5
+        //HOME WORK 6 Locator By.cssSelector
+        // HOME WORK 7 Переписать все стратегии из прошлого Д/З на xPath
+        // (записать новый результат под старым), сделать для каждого элемента по несколько вариантов
 
         //Locator By.tagName
 
-       wd.findElement(By.tagName("form"));
+        wd.findElement(By.tagName("form"));
+        //Locator By.xPath
+        wd.findElement(By.xpath("//form"));
+        wd.findElement(By.xpath("//div[@class='login_login__3EHKB']/form"));
 
 
-       //Locator By.cssSelector
-       wd.findElement(By.cssSelector("form"));
+        //Locator By.cssSelector
+        wd.findElement(By.cssSelector("form"));
         //Locator By.xPath
         wd.findElement(By.xpath("//form"));
 
 
-
-
-
         //Locator By.className
-         wd.findElement(By.className("active"));
-         wd.findElement(By.className("navbar-component_nav__1X_4m"));
-         wd.findElement(By.className("container"));
+        wd.findElement(By.className("active"));
+        wd.findElement(By.className("navbar-component_nav__1X_4m"));
+        wd.findElement(By.className("container"));
 
-         //Locator By.cssSelector
+
+        //Locator By.cssSelector
         wd.findElement(By.cssSelector(".active"));
         wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
         wd.findElement(By.cssSelector(".container"));
 
         //Locator By.xPath
         wd.findElement(By.xpath("//*[@class = 'navbar-component_nav__1X_4m']"));
+        wd.findElement(By.xpath("//*[@class = 'container']"));
 
 
+        //Locator By.id
+        wd.findElement(By.id("root"));
 
-
-       //Locator By.id
-         wd.findElement(By.id("root"));
-
-         //Locator By.cssSelector
+        //Locator By.cssSelector
         wd.findElement(By.cssSelector("#root"));
 
 
-         //Locator By.linkText
+        //Locator By.linkText
         wd.findElement(By.linkText("HOME"));
         wd.findElement(By.linkText("ABOUT"));
         wd.findElement(By.linkText("LOGIN"));
@@ -90,8 +92,11 @@ public class SeleniumStart {
         wd.findElement(By.cssSelector("[href*='home']"));
         wd.findElement(By.cssSelector("[href^='/a']"));
         wd.findElement(By.cssSelector("[href$='in']"));
+        //Locator By.xPath
+        wd.findElement(By.xpath("//*[starts-with(text(),'HO')]"));
+        
 
-       //Locator By.name
+        //Locator By.name
 
         wd.findElement(By.name("password"));
         wd.findElement(By.name("email"));
