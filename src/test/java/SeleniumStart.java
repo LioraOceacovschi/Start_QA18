@@ -94,7 +94,7 @@ public class SeleniumStart {
         wd.findElement(By.cssSelector("[href$='in']"));
         //Locator By.xPath
         wd.findElement(By.xpath("//*[starts-with(text(),'HO')]"));
-        
+
 
         //Locator By.name
 
